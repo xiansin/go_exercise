@@ -12,6 +12,7 @@ func main(){
     VarType()
     Convert()
     Complex()
+    String()
 }
 
 func test(){
@@ -58,6 +59,21 @@ func Complex(){
     fmt.Printf("c1虚数%v\n",imag(c1))
     // cmath 包 里面的相关函数是常用 complex128 作为参数的，在对内存要求不是那么高的时候最好采用 complex128 作为计算类型
     // 如果 re 和 im 都是 float32 类型的 可以使用 c = complex(re, im) 来获得
+}
+
+func String()  {
+    /*
+    判断是否为字母：unicode.IsLetter(ch)
+    判断是否为数字：unicode.IsDigit(ch)
+    判断是否为空白符号：unicode.IsSpace(ch)
+     */
+    var ch int = '\u0041'
+    var ch2 int = '\u03B2'
+    var ch3 int = '\U00101234'
+    fmt.Printf("%d - %d - %d\n", ch, ch2, ch3) // integer
+    fmt.Printf("%c - %c - %c\n", ch, ch2, ch3) // character
+    fmt.Printf("%X - %X - %X\n", ch, ch2, ch3) // UTF-8 bytes
+    fmt.Printf("%U - %U - %U", ch, ch2, ch3) // UTF-8 code point
 }
 
 
