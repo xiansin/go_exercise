@@ -4,7 +4,8 @@ import "fmt"
 
 func main(){
 	//forChart(5)
-	loop()
+	//loop()
+	bitwiseComplement()
 }
 
 func forChart(num int){
@@ -24,6 +25,11 @@ func loop(){
 		if i < 15{
 			goto START
 		}
+}
 
+func bitwiseComplement(){
+	for i :=0; i<10;i++  {
+		fmt.Printf("the complement of %b is: %b\n",i,^i)
+	}
 }
 
