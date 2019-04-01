@@ -7,12 +7,14 @@ func main() {
 	//loop()
 	//fizzBuzz()
 	//forRange()
+	//bitwiseComplement()
 
 	for i := 0; i < 5; i++ {
 		var v int
-		fmt.Printf("%d %p", v,*v)
+		fmt.Printf("%d %p\n", v, &v)
 		v = 5
 	}
+
 }
 
 func forChart(num int) {
@@ -26,13 +28,18 @@ func forChart(num int) {
 
 func loop() {
 	i := 0
-START:
-	fmt.Println(i)
-	i++
-	if i < 15 {
-		goto START
-	}
+	START:
+		fmt.Println(i)
+		i++
+		if i < 15{
+			goto START
+		}
+}
 
+func bitwiseComplement(){
+	for i :=0; i<10;i++  {
+		fmt.Printf("the complement of %b is: %b\n",i,^i)
+	}
 }
 
 func fizzBuzz() {
