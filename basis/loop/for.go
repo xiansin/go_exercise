@@ -27,9 +27,21 @@ func main() {
 		fmt.Println("Value of s:", s)
 		s = s + "a"
 	}*/
-	for i, j, s := 0, 5, "a"; i < 3 && j < 100 && s != "aaaaa"; i, j,
+	/*for i, j, s := 0, 5, "a"; i < 3 && j < 100 && s != "aaaaa"; i, j,
 		s = i+1, j+1, s + "a" {
 		fmt.Println("Value of i, j, s:", i, j, s)
+	}*/
+	tag()
+}
+func tag(){
+	LABEL1:
+	for i := 0; i <= 5; i++ {
+		for j := 0; j <= 5; j++ {
+			if j == 4 {
+				continue LABEL1
+			}
+			fmt.Printf("i is: %d, and j is: %d\n", i, j)
+		}
 	}
 }
 
