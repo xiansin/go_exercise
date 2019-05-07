@@ -21,13 +21,18 @@ func main() {
 	}
 }
 
+/*
+ 未命名返回值
+ */
 func MySqrt(var1 float64) (float64, error) {
 	if var1 < 0 {
 		return float64(math.NaN()), errors.New("I won't be able to do a sqrt of negative number!")
 	}
 	return math.Sqrt(var1), nil
 }
-
+/*
+ 命名返回值
+ */
 func MySqrt1(var1 float64) (x1 float64, x2 error) {
 	if var1 < 0 {
 		x1 = float64(math.NaN())
